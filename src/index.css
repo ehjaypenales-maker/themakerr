@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-neon-blue: #00f0ff;
+  --color-neon-purple: #bd00ff;
+  --color-neon-cyan: #00ffcc;
+  --color-neon-pink: #ff007f;
+  --color-dark-bg: #030303;
+  --color-dark-surface: #0a0a0c;
+  --color-dark-card: #121215;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a24;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #252535;
+}
+
+/* Animated radial grid background */
+.radial-grid {
+  background-image: 
+    radial-gradient(ellipse at 50% 50%, rgba(10, 10, 15, 0) 40%, rgba(3, 3, 3, 1) 100%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 64px 64px, 64px 64px;
+}
+
+/* Premium blurred glass effect */
+.glassmorphism {
+  background: rgba(18, 18, 21, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glassmorphism:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Glow effects */
+.glow-blue {
+  filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.35));
+}
+.glow-purple {
+  filter: drop-shadow(0 0 15px rgba(189, 0, 255, 0.35));
+}
+.glow-pink {
+  filter: drop-shadow(0 0 15px rgba(255, 0, 127, 0.35));
+}
+
+/* Futuristic elements */
+.neon-border-blue {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15), inset 0 0 10px rgba(0, 240, 255, 0.1);
+}
+.neon-border-purple {
+  box-shadow: 0 0 20px rgba(189, 0, 255, 0.15), inset 0 0 10px rgba(189, 0, 255, 0.1);
+}
+
+/* Infinite rotation matching animation */
+@keyframes mesh-pulse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(10%, 15%) scale(1.1) rotate(120deg);
+  }
+  66% {
+    transform: translate(-10%, -10%) scale(0.9) rotate(240deg);
+  }
+}
+
+.mesh-container {
+  overflow: hidden;
+}
+
+.mesh-glow-1 {
+  animation: mesh-pulse 24s infinite alternate ease-in-out;
+}
+
+.mesh-glow-2 {
+  animation: mesh-pulse 32s infinite alternate-reverse ease-in-out;
+}
+
+.mesh-glow-3 {
+  animation: mesh-pulse 28s infinite alternate ease-in-out;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

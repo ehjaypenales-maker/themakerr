@@ -1,0 +1,6 @@
+{
+  "name": "Aetheris Cinematic Landing Page",
+  "description": "An ultra-premium interactive futuristic landing page with 3D elements, dynamic particles, responsive grids, and neon ambient glows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
